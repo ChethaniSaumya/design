@@ -1,0 +1,935 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: radial-gradient(circle farthest-side at 50% 100%, rgba(1, 9, 18, 0),
+      rgba(1, 6, 14, 0.6) 36%,
+      rgba(1, 14, 29, 0.6) 55%,
+      rgba(49, 18, 93, 0.4));
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 499px) {
+  #mainT{
+    font-size: 40px;
+  }
+
+  #subCon{
+    font-size: 20px;
+  }
+
+  #tickerPC{
+    display: none;
+  }
+
+  .ticker2 {
+    margin-top: -40px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* example: override wallet button style */
+  .wallet-adapter-button:not([disabled]):hover {
+    background-color: #707070;
+  }
+  
+  #subP {
+    font-size: 14px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .me {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+  
+  .me:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 100%;
+  }
+  
+  
+  /* Ensure the footer container has overflow hidden */
+  .footer-container {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    position: relative;
+    rotate: -4deg;
+  }
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track2 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  /*...................TRACK 2..................*/
+  
+  
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track3 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scrollRight 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scrollRight {
+    0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  
+    100% { transform: translateX(0); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  #rBtn{
+    rotate: -4deg;
+  }
+  
+  #amountSol{
+    rotate: -4deg;
+  }
+  
+  #tSupply{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.521);
+    flex-flow: column nowrap;
+    text-align: center;
+    text-align: center;
+    margin-left: 8px;
+  }
+  
+  #price{
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+
+  #mainT{
+    font-size: 40px;
+  }
+
+  #subCon{
+    font-size: 20px;
+  }
+
+  #tickerPC{
+    display: none;
+  }
+
+  #tickerMob{
+    
+  }
+  .ticker2 {
+    margin-top: -40px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* example: override wallet button style */
+  .wallet-adapter-button:not([disabled]):hover {
+    background-color: #707070;
+  }
+  
+  #subP {
+    font-size: 14px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .me {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+  
+  .me:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 100%;
+  }
+  
+  
+  /* Ensure the footer container has overflow hidden */
+  .footer-container {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    position: relative;
+    rotate: -4deg;
+  }
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track2 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  /*...................TRACK 2..................*/
+  
+  
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track3 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scrollRight 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scrollRight {
+    0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  
+    100% { transform: translateX(0); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  #rBtn{
+    rotate: -4deg;
+  }
+  
+  #amountSol{
+    rotate: -4deg;
+  }
+  
+  #tSupply{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.521);
+    flex-flow: column nowrap;
+    text-align: center;
+    text-align: center;
+    margin-left: 8px;
+  }
+  
+  #price{
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  #mainT{
+    font-size: 45px;
+  }
+
+  #subCon{
+    font-size: 30px;
+  }
+
+  .ticker2 {
+    margin-top: -40px;
+    width: 100%;
+  }
+
+  #tickerMob{
+    display: none;
+  }
+  
+  /* example: override wallet button style */
+  .wallet-adapter-button:not([disabled]):hover {
+    background-color: #707070;
+  }
+  
+  #subP {
+    font-size: 14px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .me {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+  
+  .me:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 100%;
+  }
+  
+  
+  /* Ensure the footer container has overflow hidden */
+  .footer-container {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    position: relative;
+    rotate: -4deg;
+  }
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track2 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  /*...................TRACK 2..................*/
+  
+  
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track3 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scrollRight 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scrollRight {
+    0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  
+    100% { transform: translateX(0); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  #rBtn{
+    rotate: -4deg;
+  }
+  
+  #amountSol{
+    rotate: -4deg;
+  }
+  
+  #tSupply{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.521);
+    flex-flow: column nowrap;
+    text-align: center;
+    text-align: center;
+    margin-left: 8px;
+  }
+  
+  #price{
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #tickerMob{
+    display: none;
+  }
+
+  .ticker2 {
+    margin-top: -40px;
+    width: 100%;
+  }
+  
+  /* example: override wallet button style */
+  .wallet-adapter-button:not([disabled]):hover {
+    background-color: #707070;
+  }
+  
+  #subP {
+    font-size: 14px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+  
+  .me {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+  
+  .me:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 100%;
+  }
+  
+  
+  /* Ensure the footer container has overflow hidden */
+  .footer-container {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    position: relative;
+    rotate: -4deg;
+  }
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track2 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  /*...................TRACK 2..................*/
+  
+  
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track3 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scrollRight 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scrollRight {
+    0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  
+    100% { transform: translateX(0); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  #rBtn{
+    rotate: -4deg;
+  }
+  
+  #amountSol{
+    rotate: -4deg;
+  }
+  
+  #tSupply{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.521);
+    flex-flow: column nowrap;
+    text-align: center;
+    text-align: center;
+    margin-left: 8px;
+  }
+  
+  #price{
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+
+.ticker2 {
+  margin-top: -40px;
+  width: 100%;
+}
+
+#tickerMob{
+  display: none;
+}
+
+/* example: override wallet button style */
+.wallet-adapter-button:not([disabled]):hover {
+  background-color: #707070;
+}
+
+#subP {
+  font-size: 14px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+
+.me {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.me:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 70px;
+  border-radius: 100%;
+}
+
+
+/* Ensure the footer container has overflow hidden */
+.footer-container {
+  width: 100vw; /* Constrain width to viewport width */
+  overflow: hidden;
+  position: relative;
+  rotate: -4deg;
+}
+
+.slider {
+  width: 100vw; /* Constrain width to viewport width */
+  overflow: hidden;
+  display: flex;
+}
+
+.slide-track2 {
+  display: flex;
+  width: calc(250px * 16); /* Adjust as needed */
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  min-width: 250px; /* Adjust to match the width of the images */
+  flex-shrink: 0;
+}
+
+.carouselIMG {
+  width: 200px;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+}
+
+
+
+/*...................TRACK 2..................*/
+
+
+
+.slider {
+  width: 100vw; /* Constrain width to viewport width */
+  overflow: hidden;
+  display: flex;
+}
+
+.slide-track3 {
+  display: flex;
+  width: calc(250px * 16); /* Adjust as needed */
+  animation: scrollRight 40s linear infinite;
+}
+
+.slide {
+  min-width: 250px; /* Adjust to match the width of the images */
+  flex-shrink: 0;
+}
+
+.carouselIMG {
+  width: 200px;
+  height: auto;
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+
+  100% { transform: translateX(0); }
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+}
+
+
+
+#rBtn{
+  rotate: -4deg;
+}
+
+#amountSol{
+  rotate: -4deg;
+}
+
+#tSupply{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.521);
+  flex-flow: column nowrap;
+  text-align: center;
+  text-align: center;
+  margin-left: 8px;
+}
+
+#price{
+  font-size: 25px;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: 5px;
+}
+}
+
+@media screen and (min-width: 1920px) {
+  #mainT{
+    font-size: 100px;
+  }
+
+  #subCon{
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  #tickerMob{
+    display: none;
+  }
+
+  .ticker2 {
+    margin-top: -40px;
+    width: 100%;
+  }
+  
+  /* example: override wallet button style */
+  .wallet-adapter-button:not([disabled]):hover {
+    background-color: #707070;
+  }
+  
+  #subP {
+    font-size: 22px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+  
+  #mintNFT{
+    font-size: 40px;
+  }
+  .me {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+  
+  .me:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 110px;
+    border-radius: 100%;
+  }
+  
+  
+  /* Ensure the footer container has overflow hidden */
+  .footer-container {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    position: relative;
+    rotate: -4deg;
+  }
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track2 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+  
+  
+  
+  /*...................TRACK 2..................*/
+  
+  
+  
+  .slider {
+    width: 100vw; /* Constrain width to viewport width */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide-track3 {
+    display: flex;
+    width: calc(250px * 16); /* Adjust as needed */
+    animation: scrollRight 40s linear infinite;
+  }
+  
+  .slide {
+    min-width: 250px; /* Adjust to match the width of the images */
+    flex-shrink: 0;
+  }
+  
+  .carouselIMG {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes scrollRight {
+    0% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  
+    100% { transform: translateX(0); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Adjust as needed */
+  }
+
+  
+  #rBtn{
+    rotate: -4deg;
+  }
+  
+  #amountSol{
+    rotate: -4deg;
+  }
+  
+  #tSupply{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.521);
+    flex-flow: column nowrap;
+    text-align: center;
+    text-align: center;
+    margin-left: 8px;
+  }
+  
+  #price{
+    font-size: 35px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px
+  }
+  }
