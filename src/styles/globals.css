@@ -34,6 +34,10 @@ a {
     font-size: 40px;
   }
 
+  #tickerMob{
+    margin-bottom: 30px;
+  }
+
   #subCon{
     font-size: 20px;
   }
@@ -197,7 +201,7 @@ a {
   }
 
   #tickerMob{
-    
+    margin-bottom: 30px;
   }
   .ticker2 {
     margin-top: -40px;
@@ -356,6 +360,10 @@ a {
 
   #tickerMob{
     display: none;
+  }
+
+  #tickerPC{
+    margin-bottom: 25px;
   }
   
   /* example: override wallet button style */
